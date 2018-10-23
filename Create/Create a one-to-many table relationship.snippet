@@ -117,14 +117,14 @@ CREATE TABLE $table1_name$ (
 	$table1.column1_name$ $table1.column1.data_type$ $table1.column1_properties$,
 	$table1.column2_name$ $table1.column2.data_type$ $table1.column2_properties$,
 	$table1.column3_name$ $table1.column3.data_type$ $table1.column3_properties$,
-	CreateTS DATETIME DEFAULT GetDate()
+	CreateTS DATETIME DEFAULT GETDATE()
 	); 
 
-CREATE TABLE $table2_name (
+CREATE TABLE $table2_name$ (
 	$table2.column1_name$ $table2.column1.data_type$ $table2.column1_properties$,
 	$table1.column1_name$ $table1.column1.data_type$ REFERENCES $table1_name$($table1.column1_name$),
 	$table2.column3_name$ $table2.column3.data_type$ $table2.column3_properties$,
-	CreateTS DATETIME DEFAULT GetDate()
+	CreateTS DATETIME DEFAULT GETDATE()
 	);
 	
 ]]>
