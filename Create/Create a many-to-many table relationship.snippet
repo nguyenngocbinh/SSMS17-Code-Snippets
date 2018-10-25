@@ -75,7 +75,7 @@
 
 								<Literal>
                                 	<ID>table2_name</ID>
-                                	<ToolTip>Provide the name of the second table (the many table)</ToolTip>
+                                	<ToolTip>Provide the name of the second table (the second one table)</ToolTip>
                                 	<Default>[table2_name]</Default>
                                 </Literal>
 
@@ -128,8 +128,8 @@
 
 								<Literal>
                                 	<ID>table3_name</ID>
-                                	<ToolTip>Provide the name of the second table (the many table)</ToolTip>
-                                	<Default>[table2_name]</Default>
+                                	<ToolTip>Provide the name of the linking table (the many table)</ToolTip>
+                                	<Default>[table3_name]</Default>
                                 </Literal>
 
 									<Literal>
@@ -144,7 +144,8 @@
 									<Default>[data_type]</Default>
 									</Literal>
 
-									<ID>table3.column3_properties</ID>
+									<Literal>
+									<ID>table3.column1_properties</ID>
                                 	<ToolTip>Provide the properties of the column</ToolTip>
                                 	<Default>[column_properties]</Default>
                                 	</Literal>
@@ -159,9 +160,9 @@ CREATE TABLE $table1_name$ (
 	); 
 
 CREATE TABLE $table2_name$ (
-	$table2.column1_name$ $table1.column1.data_type$ $table1.column1_properties$,
-	$table2.column2_name$ $table1.column2.data_type$ $table1.column2_properties$,
-	$table2.column3_name$ $table1.column3.data_type$ $table1.column3_properties$,
+	$table2.column1_name$ $table2.column1.data_type$ $table2.column1_properties$,
+	$table2.column2_name$ $table2.column2.data_type$ $table2.column2_properties$,
+	$table2.column3_name$ $table2.column3.data_type$ $table2.column3_properties$,
 	CreateTS DATETIME DEFAULT GETDATE()
 	);
 
