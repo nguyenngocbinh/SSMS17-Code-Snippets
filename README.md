@@ -1,7 +1,7 @@
 # SSMS17 Code Snippets
-I started this GitHub repository, in a T-SQL course, in order to teach myself Git, GitHub and improve my workflow (and the workflow of my peers) in SQL Server Management Studio 2017.
+I started this GitHub repository in a T-SQL course to teach myself Git, GitHub and improve my workflow (and the workflow of my peers) in SQL Server Management Studio 2017.
 
-This repository contains several code snippets for T-SQL that have been formatted to reflect the format used in the plugin called [Poor Man's T-SQL Formatter](http://architectshack.com/PoorMansTSqlFormatter.ashx). 
+This repository contains several code snippets for T-SQL that have been formatted to match the formatting used (with some exceptions, such as the Allman bracing style) in the plugin called [Poor Man's T-SQL Formatter](http://architectshack.com/PoorMansTSqlFormatter.ashx). 
 
 ## Using The Snippets
 If you would like to use these custom snippets, you need to download the code and import it to SQL Server Management Studio. You can do by following these [instructions](https://docs.microsoft.com/en-us/sql/relational-databases/scripting/add-transact-sql-snippets?view=sql-server-2017) in Microsoft's documentation.
