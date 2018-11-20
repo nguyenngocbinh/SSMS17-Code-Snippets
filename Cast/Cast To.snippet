@@ -10,9 +10,9 @@
 </_locDefinition>
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>Cast As Decimal</Title>
+			<Title>Cast To</Title>
                         <Shortcut></Shortcut>
-			<Description>Code Snippet for an inline decimal cast statement.</Description>
+			<Description>Code Snippet for an inline generic cast statement.</Description>
 			<Author>Asel Sathkumara</Author>
 			<SnippetTypes>
                                 <SnippetType>SurroundsWith</SnippetType>
@@ -26,17 +26,13 @@
                                 	<Default>[alias_name]</Default>
                                 </Literal>
 								<Literal>
-                                	<ID>precision</ID>
-                                	<ToolTip>Provide the precision for the decimal value</ToolTip>
-                                	<Default>precision</Default>
+                                	<ID>data_type</ID>
+                                	<ToolTip>Provide the data type you wish to cast to</ToolTip>
+                                	<Default>[data_type]</Default>
                                 </Literal>
-								<Literal>
-                                	<ID>scale</ID>
-                                	<ToolTip>Provide the scale for the decimal value</ToolTip>
-                                	<Default>scale</Default>
-                                </Literal>
+
 			</Declarations>
-			<Code Language="SQL"><![CDATA[CAST($selected$ AS DECIMAL($precision$, $scale$)) AS $alias$]]>
+			<Code Language="SQL"><![CDATA[CAST($selected$ AS $data_type$) AS $alias$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

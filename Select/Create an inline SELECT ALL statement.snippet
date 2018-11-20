@@ -10,23 +10,24 @@
 </_locDefinition>
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>Cast As Varchar</Title>
+			<Title>Create an inline SELECT ALL statement</Title>
                         <Shortcut></Shortcut>
-			<Description>Code Snippet for an inline varchar cast statement.</Description>
+			<Description>Code Snippet for a inline SELECT ALL statement.</Description>
 			<Author>Asel Sathkumara</Author>
 			<SnippetTypes>
-                                <SnippetType>SurroundsWith</SnippetType>
+                                <SnippetType>Expansion</SnippetType>
 			</SnippetTypes>
 		</Header>
 		<Snippet>
 			<Declarations>
                                 <Literal>
-                                	<ID>alias</ID>
-                                	<ToolTip>Provide an alias for the value</ToolTip>
-                                	<Default>[alias_name]</Default>
+                                	<ID>table</ID>
+                                	<ToolTip>Provide the name of the table you wish to query</ToolTip>
+                                	<Default>[table_name]</Default>
                                 </Literal>
 			</Declarations>
-			<Code Language="SQL"><![CDATA[CAST($selected$ AS VARCHAR) AS $alias$]]>
+			<Code Language="SQL">
+			<![CDATA[SELECT * FROM $table$;]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
