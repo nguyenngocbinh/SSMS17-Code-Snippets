@@ -20,6 +20,13 @@
 		</Header>
 		<Snippet>
 			<Declarations>
+								<Literal>
+                                	<ID>database_name</ID>
+                                	<ToolTip>Provide the name of the database you want to use</ToolTip>
+                                	<Default>[database_name]</Default>
+                                </Literal>
+
+								<!-- Table 1 Declarations -->
                                 <Literal>
                                 	<ID>table1_name</ID>
                                 	<ToolTip>Provide the name of the first table (the one table)</ToolTip>
@@ -72,7 +79,9 @@
                                 	<ToolTip>Provide the properties of the column</ToolTip>
                                 	<Default>[column_properties]</Default>
                                 	</Literal>
+								<!-- Table 1 Declarations END -->
 
+								<!-- Table 2 Declarations -->
 								<Literal>
                                 	<ID>table2_name</ID>
                                 	<ToolTip>Provide the name of the second table (the many table)</ToolTip>
@@ -110,22 +119,28 @@
                                 	<ToolTip>Provide the properties of the column</ToolTip>
                                 	<Default>[column_properties]</Default>
                                 	</Literal>
+								<!-- Table 2 Declarations END -->
 								
 			</Declarations>
 			<Code Language="SQL"><![CDATA[
-CREATE TABLE $table1_name$ (
+USE $database_name$;
+GO
+
+CREATE TABLE $table1_name$ 
+(
 	$table1.column1_name$ $table1.column1.data_type$ $table1.column1_properties$,
 	$table1.column2_name$ $table1.column2.data_type$ $table1.column2_properties$,
 	$table1.column3_name$ $table1.column3.data_type$ $table1.column3_properties$,
 	CreateTS DATETIME DEFAULT GETDATE()
-	); 
+); 
 
-CREATE TABLE $table2_name$ (
+CREATE TABLE $table2_name$ 
+(
 	$table2.column1_name$ $table2.column1.data_type$ $table2.column1_properties$,
 	$table1.column1_name$ $table1.column1.data_type$ REFERENCES $table1_name$($table1.column1_name$),
 	$table2.column3_name$ $table2.column3.data_type$ $table2.column3_properties$,
 	CreateTS DATETIME DEFAULT GETDATE()
-	);
+);
 	
 ]]>
 			</Code>
