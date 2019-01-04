@@ -9,6 +9,3 @@ This repository contains several code snippets for T-SQL that have been formatte
 If you would like to use these custom snippets, you need to [download](https://github.com/asathkumara/SSMS17-Code-Snippets/releases/tag/v0.1) the code and import it to SQL Server Management Studio. You can do by following these [instructions](https://docs.microsoft.com/en-us/sql/relational-databases/scripting/add-transact-sql-snippets?view=sql-server-2017) in Microsoft's documentation.
 
 Feel free to change the snippet code, once you've downloaded it, to match the formatting you use. 
-
-## Contributing Changes
-If you would like to contribute to this repository and are familiar with the [code snippet schema](https://docs.microsoft.com/en-us/visualstudio/ide/code-snippets-schema-reference?view=vs-2015), please get in touch with me as I'm focusing on writing snippets for very basic T-SQL statements. 
