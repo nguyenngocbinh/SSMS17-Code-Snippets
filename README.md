@@ -1,3 +1,5 @@
+## Note: This project is no longer being actively maintained. Please feel free to fork it and extend it. 
+
 ## Introduction
 I started this GitHub repository in a T-SQL course to teach myself Git, GitHub and improve my workflow (and the workflow of my peers) in SQL Server Management Studio 2017.
 
